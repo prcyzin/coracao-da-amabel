@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./acesso.css">
+    <title>Login do meu coração</title>
+    <script>
+        function send() {
+            var usuario = document.querySelector('.usuario').value;
+            var senha = document.querySelector('.senha').value;
+
+            if (usuario === 'LCED' && senha === 'osquatromosqueteiros') {
+                document.getElementById('sucesso').style.display = 'block';
+                document.getElementById('preencha').style.display = 'none';
+                document.getElementById('negado').style.display = 'none';
+            } else {
+                document.getElementById('sucesso').style.display = 'none';
+                document.getElementById('preencha').style.display = 'none';
+                document.getElementById('negado').style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container-login">
+        <div class="login">
+            <div id="profile">
+                <img src="../ASSETS/foto.png" alt="">
+                <h1>Coração da amabel &#128151 </h1>
+            </div>
+            <form>
+                <p id="sucesso" style="display: none">Sucesso !</p>
+                <p id="preencha" style="display: none">Preencha todos os campos !</p>
+                <p id="negado" style="display: none">Acesso negado !</p>
+                <input required type="text" placeholder="Nome de Usuário" autofocus class="usuario">
+                <input required type="password" placeholder="Senha" class="senha">
+                <input type="submit" value="ENTRAR" onclick="send(); return false">
+            </form>
+            <p>Ainda não tem uma conta gatinha ? <a href="../criar conta/criar conta.html">Crie aqui &#128525 &#128151 </a></p>
+        </div>
+    </div>
+</body>
+</html>
